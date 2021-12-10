@@ -33,6 +33,10 @@ p{
   letter-spacing: -.05rem;
 }
 
+.content{
+  margin-top: 20em;
+}
+
 #bg-img{
   position: absolute;
   height: 100%; 
@@ -40,4 +44,10 @@ p{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.intergers{
+  font-weight: 400;
+  font-size: 7em;
+  font-family: 'Roboto Mono', monospace;
 }
