@@ -24,8 +24,23 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=sdcCicWmBL9lc51EcwZNp64dDHpMJ
     // set src of image to photo url 
     console.log('Image Source:', imageData.hdurl)
 
+    console.log(imageData)
+
     document.getElementById('bg-img').style.backgroundImage = 'url(' + imageData.hdurl + ')';
+  
+    let $imginfo = document.getElementById('extra-data');
+    $imginfo.innerHTML = 
+    (`<div class="container">
+        <div class="row">
+          <div class="datablock col"><h2>Source</h2>` + imageData.hdurl + `</div>
+          <div class="datablock col"><h2>Image Title</h2>` + imageData.title + `</div>
+          <div class="w-100"></div>
+          <div class="datablock col"><h2>Image Title</h2>` + imageData.title + `</div>
+          <div class="datablock col"><h2>Image Author</h2>` + imageData.copyright + `</div>
+        </div>`);
+
   }
+  
 
 })
 
@@ -54,17 +69,17 @@ $date.innerHTML = (`<h1>${currentDate.toDateString()}</h1>`);
 let motd = document.getElementById('motd');
 
 // If past 12am and before 12pm
-if ((date.getHours() > 0) && (date.getHours() < 12) ) {
+if ((date.getHours() >= 0) && (date.getHours() < 12) ) {
   motd.innerHTML = '<h1>Good Morning!</h1>';
 } 
 
 // If past 12pm and before 6pm
-else if ((date.getHours() > 12) && (date.getHours() < 18) ) {
+else if ((date.getHours() >= 12) && (date.getHours() < 18) ) {
   motd.innerHTML = '<h1>Good Afternoon!</h1>';
 } 
 
 // If past 6pm
-else if (date.getHours() > 18) {
+else if ((date.getHours() >= 18) && (date.getHours() <= 23) ) {
   motd.innerHTML = '<h1>Good Evening!</h1>';
 } 
 
