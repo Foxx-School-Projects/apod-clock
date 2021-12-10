@@ -1,0 +1,33 @@
+
+/* ====================== Start of Custom CSS ===================== */
+
+/* Body Font and Background */
+body{
+  font-family: 'Inter', sans-serif;
+  color: black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h1{
+  margin-bottom: 0.15em;
+  font-weight: 600;
+  font-size: 2.2rem;
+  letter-spacing: -.1rem;
+}
+
+
+h2{
+  font-weight: 500;
+  font-size: 1.75rem;
+  letter-spacing: -.05rem;
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
+
+p{
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  letter-spacing: -.05rem;
+}
