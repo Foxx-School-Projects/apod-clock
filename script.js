@@ -80,13 +80,12 @@ const $togcontent = document.getElementById('settingblock');
 
 $settingsButton.addEventListener('click', function (e) {
 
-  // Target Hamburger Button
+  // Target Button
   let $selectedInput = e.target.closest('.togglebutton');
 
   // If Present
   if ($selectedInput){
 
-    // Manipulate Nav Class
     $togcontent.classList.toggle("dnone");
     $togcontent.classList.toggle("dblock");
 
@@ -103,7 +102,7 @@ const $infoCont = document.getElementById('infoblock');
 
 $infoButton.addEventListener('click', function (e) {
 
-  // Target Hamburger Button
+  // Target Button
   let $selectedInput = e.target.closest('.togglebutton');
 
   // If Present
