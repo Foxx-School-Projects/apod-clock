@@ -69,6 +69,48 @@ else if (date.getHours() > 18) {
 } 
 
 
-
-
 }, 0, 1000);
+
+
+// ==== Settings Button Integration ====
+
+// Click Event Listener
+const $settingsButton = document.getElementById('settings');
+const $togcontent = document.getElementById('settingblock');
+
+$settingsButton.addEventListener('click', function (e) {
+
+  // Target Hamburger Button
+  let $selectedInput = e.target.closest('.togglebutton');
+
+  // If Present
+  if ($selectedInput){
+
+    // Manipulate Nav Class
+    $togcontent.classList.toggle("dnone");
+    $togcontent.classList.toggle("dblock");
+
+  }
+});
+
+
+
+// ==== Info Button Integration ====
+
+// Click Event Listener
+const $infoButton = document.getElementById('infotog');
+const $infoCont = document.getElementById('infoblock');
+
+$infoButton.addEventListener('click', function (e) {
+
+  // Target Hamburger Button
+  let $selectedInput = e.target.closest('.togglebutton');
+
+  // If Present
+  if ($selectedInput){
+
+    $infoCont.classList.toggle("dnone");
+    $infoCont.classList.toggle("dblock");
+
+  }
+});

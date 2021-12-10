@@ -34,7 +34,7 @@ p{
 }
 
 .content{
-  margin-top: 20em;
+  margin-top: 16em;
 }
 
 #bg-img{
@@ -50,4 +50,40 @@ p{
   font-weight: 400;
   font-size: 7em;
   font-family: 'Roboto Mono', monospace;
+}
+
+button{
+  margin-left: 1em;
+  padding: 0.5em;
+  background: white;
+  border: none;
+  margin-top: 0.5em;
+  border-radius: 7px;
+}
+
+button:hover{
+  background: rgb(189, 189, 189);
+  transition: 0.2s;
+}
+
+/* ==== JAVASCRIPT CLASSES ==== */
+
+/* Display None */
+.dnone{
+  display: none;
+}
+
+/* Display Block */
+.dblock{
+  display: block;
+}
+
+#settingblock{
+  margin-left: 1em;
+  position: absolute;
+}
+
+#infoblock {
+  margin-top: 1em;
+
 }
