@@ -70,20 +70,33 @@ button:hover{
 
 /* Display None */
 .dnone{
-  display: none;
+  opacity: 0%;
+  visibility: hidden;
+  transition: 0.4s;
 }
 
 /* Display Block */
 .dblock{
-  display: block;
+  opacity: 100%;
+  visibility: visible;
+  transition: 0.4s;
 }
 
 #settingblock{
+  border-radius: 15px;
   margin-left: 1em;
+  margin-top: 1em;
+  padding: 2em;
   position: absolute;
+  background-color: white;
+  color: black;
 }
 
 #infoblock {
-  margin-top: 1em;
-
+  margin-top: 2em;
+  padding-top: 1em;
+  color: black;
+  background-color: white;
+  padding-bottom: 100%;
 }
+
