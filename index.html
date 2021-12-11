@@ -22,44 +22,50 @@
 
 </head>
 
+<!-- Body -->
+<body class="fluid-container">
 
-<body>
-
-  <div id="bg-img">
-
+<!-- Background Image Container -->
+<div id="bg-img">
 
 
+  <!-- Settings Button -->
+  <button class="togglebutton" id="settings" type="button">Settings</button>
 
-    <button class="togglebutton" id="settings" type="button" >Settings</button>
+  <!-- Settings Contents -->
+  <div class="dnone text-center" id="settingblock">
 
-    <div class="dnone" id="settingblock">
-      <h1>Active</h1>
-      <button>Submit</button>
+      <input type="checkbox" id="seconds" name="seconds" value="off">
+      <label for="seconds">Show Seconds</label>
+
+  </div>
+
+  <!-- Clock Container -->
+  <div class="content text-center">
+
+    <!-- Message of the Day -->
+    <div id="motd" class="motd align-items-center"></div>
+
+    <!-- Time -->
+    <div id="time"></div>
+
+    <!-- Date -->
+    <div id="date"></div>
+
+    <!-- More Info Button -->
+    <button class="togglebutton" id="infotog" type="button" >More Info</button>
+
+    <!-- More Info Contents -->
+    <div class="dnone mx-auto text-center" id="infoblock">
+      <div id="extra-data"></div>
     </div>
-
-
-
-    <div class="content text-center">
-
-      <div id="motd" class="motd align-items-center"></div>
-
-      <div id="time"></div>
-
-      <div id="date"></div>
-
-
-      <button class="togglebutton" id="infotog" type="button" >More Info</button>
-
-      <div class="dnone mx-auto text-center" id="infoblock">
-        <h1 class="text-center">Image Information</h1>
-        <div id="extra-data"></div>
-      </div>
-
-    </div>
-
-
-
-
+    
+  </div>
+  
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2021 Foxx Greeley</p>
+  </footer>
 
 </div>
 

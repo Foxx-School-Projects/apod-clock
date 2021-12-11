@@ -6,7 +6,7 @@ body{
   font-family: 'Inter', sans-serif;
   color: white;
   width: 100%;
-  min-height: 100vw;
+  min-height: 100%;
   overflow: hidden;
 }
 
@@ -42,7 +42,6 @@ p{
   height: 100%; 
   width: 100%;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -95,11 +94,32 @@ button:hover{
 #infoblock {
   margin-top: 2em;
   padding-top: 1em;
+  width: 100%;
   color: black;
   background-color: white;
   padding-bottom: 100%;
+  position: absolute;
 }
 
-.row h2{
-  margin-top: 1em;
+.col{
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.col h2{
+  font-size: 1.5em;
+}
+
+.row .col:nth-child(3){
+margin-top: 0;
+text-align: left;
+}
+
+.row .col p{
+font-size: 1.2em;
+}
+
+
+footer{
+  margin-top: 16em;
 }
