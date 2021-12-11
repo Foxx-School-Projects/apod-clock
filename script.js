@@ -6,7 +6,7 @@ let imageDate = (date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.g
 // Fetch API
 fetch('https://api.nasa.gov/planetary/apod?api_key=sdcCicWmBL9lc51EcwZNp64dDHpMJpnhb5WO5Xgz&date=' + imageDate + '&thumbs=True')
   .then(function (response){  //JS promise structure and response
-    return response.json()    //Return data
+    return response.json();    //Return data
 })
 .then(function (imageData){   //JSON data captured in this parameter
   
@@ -15,7 +15,7 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=sdcCicWmBL9lc51EcwZNp64dDHpMJ
   if (imageData.media_type === 'video') { 
     
     //If the photo is a video, use placeholder
-    document.querySelector('p').textContent = 'APOD is a video'
+    document.querySelector('p').textContent = 'APOD is a video';
 
     // Else Continue
   } else { 
@@ -35,7 +35,7 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=sdcCicWmBL9lc51EcwZNp64dDHpMJ
 
         </div>`);
   }
-})
+});
 
 
 
@@ -50,7 +50,7 @@ let $checkbox = document.querySelector("input[name=seconds]");
 if (localStorage.getItem('checkboxstatus') !== null) {
 
   // Log Status
-  console.log('== Previous Data Found ==');
+  console.log('== Previous Sec Data Found ==');
 
   // Destring Data
   let tempObject = JSON.parse(localStorage.getItem('checkboxstatus'));
@@ -79,12 +79,12 @@ $checkbox.addEventListener('change', function() {
 
   // If Checked | Value = on
   if ($checkbox.checked) {
-    $checkbox.value = 'on'
+    $checkbox.value = 'on';
   } 
   
   // If Not | Value = off
   else {
-    $checkbox.value = 'off'
+    $checkbox.value = 'off';
   }
 
   // ====== Store Setting | Local Storage =======
@@ -98,6 +98,80 @@ $checkbox.addEventListener('change', function() {
   localStorage.setItem('checkboxstatus', JSON.stringify(objectDataToStore));
 
 });
+
+
+
+
+
+// ==== Settings | Hide MOTD ====
+
+// declare motd
+let motd = document.getElementById('motd');
+
+// Select Input
+let $minbox = document.querySelector("input[name=minimal]");
+
+// ===== IF PREVIOUS DATA EXIST =====
+if (localStorage.getItem('minimalstatus') !== null) {
+
+  // Log Status
+  console.log('== Previous Min Data Found ==');
+
+  // Destring Data
+  let tempObject = JSON.parse(localStorage.getItem('minimalstatus'));
+
+  // Log Data Found
+  console.log('Past Setting is', tempObject.minbox);
+
+  // Checkbox Value = old object value
+  $minbox.value = tempObject.minbox;
+
+} 
+  
+// If Checkbox Value = On |  Checkbox Checked
+if ( ($minbox.value) === 'on' ) {
+  $minbox.checked = true;
+  motd.classList = "dnone";
+} 
+
+// Else If Checkbox Value = Off |  Checkbox Unchecked
+else if ( ($minbox.value) === 'off' ){
+  $minbox.checked = false;
+  motd.classList = "dblock";
+}
+
+
+// Event Listener |  When Checkbox Toggled
+$minbox.addEventListener('change', function() {
+
+  // If Checked | Value = on
+  if ($minbox.checked) {
+    $minbox.value = 'on';
+    motd.classList = "dnone";
+  } 
+  
+  // If Not | Value = off
+  else {
+    $minbox.value = 'off';
+    motd.classList = "dblock";
+  }
+
+  // ====== Store Setting | Local Storage =======
+
+  // Local Storage | Store Data
+  const objectDataToStore = {
+    minbox: $minbox.value,
+  };
+
+  // Store Info Under 'checkbox', Convert to string
+  localStorage.setItem('minimalstatus', JSON.stringify(objectDataToStore));
+
+});
+
+
+
+
+
 
 
 
@@ -132,8 +206,6 @@ if ($checkbox.value === 'on'){
 
 
 // = Greeting Depending on Time =
-
-let motd = document.getElementById('motd');
 
 // If past 12am and before 12pm
 if ((date.getHours() >= 0) && (date.getHours() < 12) ) {
@@ -199,7 +271,6 @@ $infoButton.addEventListener('click', function (e) {
     // Toggle Display Classes
     $infoCont.classList.toggle("dnone");
     $infoCont.classList.toggle("dblock");
-
   }
 });
 
