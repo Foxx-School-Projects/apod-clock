@@ -1,7 +1,6 @@
-
-// ==== NASA APOD | API KEY: sdcCicWmBL9lc51EcwZNp64dDHpMJpnhb5WO5Xgz
+ // ==== NASA APOD | API KEY: sdcCicWmBL9lc51EcwZNp64dDHpMJpnhb5WO5Xgz
 let date = new Date();
-let imageDate = (date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
+let imageDate = (date.getFullYear() + '-' + (date.getMonth()) + '-' + date.getDate());
 
 // Fetch API
 fetch('https://api.nasa.gov/planetary/apod?api_key=sdcCicWmBL9lc51EcwZNp64dDHpMJpnhb5WO5Xgz&date=' + imageDate + '&thumbs=True')
@@ -28,10 +27,10 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=sdcCicWmBL9lc51EcwZNp64dDHpMJ
     $imginfo.innerHTML = 
     (`<div class="container">
         <div class="row">
-          <div class="datablock col"><h2>Image Title</h2><p>` + imageData.title + ` by ` + imageData.copyright + `</p></div>
+          <div class="datablock col"><h2>Image Title:</h2><p>` + imageData.title + ` by ` + imageData.copyright + `</p></div>
 
           <div class="w-100"></div>
-          <div class="datablock col"><h2>Image Description</h2><p>` + imageData.explanation + `</p></div>
+          <div class="datablock col"><h2>Image Description:</h2><p>` + imageData.explanation + `</p></div>
 
         </div>`);
   }

@@ -1,4 +1,4 @@
-
+ 
 /* ====================== Start of Custom CSS ===================== */
 
 /* Body Font and Background */
@@ -30,6 +30,7 @@ h1{
   font-weight: 600;
   font-size: 2.6rem;
   letter-spacing: -.1rem;
+  text-shadow: 2px 2px 5px #00000070;
 }
 
 /* Body text */
@@ -57,7 +58,7 @@ button{
 }
 
 /* Margin on Settings Button */
-button:nth-child(1){
+button:nth-child(2){
   margin-left: 1em;
 }
 
@@ -98,7 +99,6 @@ input[type=checkbox]{
   width: 100%;
   color: black;
   background-color: white;
-  padding-bottom: 100%;
   position: absolute;
 }
 
@@ -118,7 +118,11 @@ input[type=checkbox]{
 }
 
 .row .col p{
-font-size: 1em;
+font-size: 0.8em;
+}
+
+.row .col:nth-child(3) p{ 
+  padding-bottom: 10em;
 }
 
 
@@ -153,7 +157,7 @@ footer{
 
   /* More info font adjustment */
   .row .col p{
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
 
   /* Clock Number Sizing */
